@@ -29,6 +29,12 @@ body{
     color: var(--text-color);
 }
 
+.header,
+.typing-form{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .header{
     margin-top: 5vh;
     padding: 1rem;
@@ -105,6 +111,9 @@ body{
     position: fixed;
     width: 100%;
     bottom: 0;
+    padding: 1rem;
+    background: var(--primary-color);
+    /* left off here at 2035 */
 }
 
 .typing-area :where(.typing-form, .action-buttons){
@@ -116,7 +125,10 @@ body{
 .typing-area .input-wrapper{
     height: 5.6rem;
     width: 100%;
+    max-width: 1000px;
     display: flex;
+    margin: 0 auto;
+    position: relative;
 }
 
 .typing-area .typing-input{
@@ -125,8 +137,54 @@ body{
     border: none;
     outline: none;
     font-size: 2rem;
+    letter-spacing: .1rem;
     color: var(--text-color);
     border-radius: 6.2rem;
     padding: 1.1rem 4rem 1.1rem 1.5rem;
     background: var(--secondary-color);
+}
+
+.typing-area .typing-input::placeholder{
+    color: var(--placeholder-color);
+}
+
+.typing-area .typing-input:focus{
+    background: var(--secondary-hover-color);
+}
+
+.typing-area .icon{
+    height: 5.6rem;
+    width: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color)
+}
+
+.typing-area .icon:hover{
+    background: var(--secondary-hover-color)!important;
+}
+
+.typing-area .input-wrapper .icon{
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.typing-area .input-wrapper .typing-input:valid ~ .icon{
+    transform: scale(1);
+}
+
+.typing-area .disclaimer{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--placeholder-color);
 }
