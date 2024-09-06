@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chaquemini</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
 
+
+    <header class="header">
+        <!-- header greetings -->
+        <h2 class="title">Hello</h2>
+        <h4 class="subtitle">how can i help you</h4>
+
+        <!-- suggestion list -->
+        <ul class="suggestion-list">
+            <li class="suggestion">
+                <h4 class="text">give a suggestion</h4>
+                <span class="icon material-symbols-rounded">draw</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">give a different suggestion</h4>
+                <span class="icon material-symbols-rounded">lightbulb</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">give another different suggestion</h4>
+                <span class="icon material-symbols-rounded">favorite</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">combine two suggestions</h4>
+                <span class="icon material-symbols-rounded">bolt</span>
+            </li>
+        </ul>
+    </header>
+    
+    <!-- typing area -->
+    <section class="typing-area">
+        <form action="#" class="typing form">
+            <section class="input-wrapper">
+                <input type="text" placeholder="self-explanatory" class="typing-input" required>
+                <button class="icon material-symbols-rounded">bubble</button>
+            </section>
+            <section class="action-buttons">
+                <span class="icon material-symbols-rounded">light_mode</span>
+                <span class="icon material-symbols-rounded">delete</span>
+            </section>
+        </form>
+        <p class="disclaimer">
+            Gemini's answers may lack some accuracy, regarding people and facts, so be sure to apply your own research in conjuction to Gemini's.
+        </p>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>
