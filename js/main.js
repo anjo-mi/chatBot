@@ -1,5 +1,6 @@
 // obtain input value, add it to chat list
 const typingForm = document.querySelector('.typing-form')
+const chatList = document.querySelector('.chat-list')
 
 
 let userMessage = null
@@ -21,7 +22,9 @@ const handleOutgoingChat = () => {
                 <p class="text"></p>
                 </section>` 
 
-    createMessageElement(html, 'outgoing')
+    const outgoingMessageSect = createMessageElement(html, 'outgoing')
+    outgoingMessageSect.querySelector('.text').innerText = userMessage
+    chatList.appendChild(outgoingMessageSect)
 
 
     typingForm.querySelector('.typing-input').value = ''
